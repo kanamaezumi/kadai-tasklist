@@ -14,7 +14,7 @@ class DropUserIdToTasklistsTable extends Migration
     public function up()
     {
         Schema::table('tasklists', function (Blueprint $table) {
-        $table->dropColumn('user_id'); 
+        //->dropColumn('user_id'); 
         });
 //
     }
@@ -27,7 +27,7 @@ class DropUserIdToTasklistsTable extends Migration
     public function down()
     {
         Schema::table('tasklists', function (Blueprint $table) {
-          $table->dropColumn('user_id');   //
+         // $table->dropColumn('user_id');   //
         });
 }
 }
