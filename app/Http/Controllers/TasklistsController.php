@@ -17,11 +17,15 @@ class TasklistsController extends Controller
      */
     public function index()
     {
+         if (\Auth::check()) {
          $tasklists = Tasklist::all();
 
         return view('tasklists.index', [
             'tasklists' => $tasklists,
         ]);
+         }else{
+              return view('welcome');
+         }
         //
     }
 
